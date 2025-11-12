@@ -1,0 +1,410 @@
+/* =========================
+   VGS-BOT Inspired style.css 
+   Light + Dark Theme + Running Announcement + PNG Toggle Icons
+   ========================= */
+
+/* Default theme variables (Light) */
+:root {
+  --bg:#ffffff;
+  --panel:#f9fafb;
+  --muted:#4b5563;
+  --accent1:#10b981; /* emerald */
+  --accent2:#3b82f6; /* blue */
+  --primary-grad: linear-gradient(90deg, var(--accent2), var(--accent1));
+  --text:#111827;
+  --card-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  --border:#e5e7eb;
+}
+
+/* Dark theme overrides */
+html[data-theme="dark"] {
+  --bg:#0b0f14;
+  --panel:#111827;
+  --muted:#9ca3af;
+  --text:#e5e7eb;
+  --card-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  --border:rgba(255,255,255,0.08);
+}
+
+/* Global */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  transition: background 0.3s, color 0.3s;
+  padding-bottom:60px;
+}
+main{max-width:1120px;margin:28px auto;padding:0 20px}
+
+/* =========================
+   Running Announcement Bar
+   ========================= */
+.announcement-bar {
+  width: 100%;
+  overflow: hidden;
+  background: var(--primary-grad);
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.announcement-track {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 18s linear infinite;
+  font-size: 0.95rem;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* =========================
+   Header / Hero
+   ========================= */
+.hero-section{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 24px;
+  max-width:1120px;
+  margin:18px auto 10px;
+  gap:18px;
+}
+.logo{
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:1.6rem;
+  background:var(--primary-grad);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.navbar{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+/* =========================
+   Nav Buttons
+   ========================= */
+.navbar .application-button{
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:999px;
+  background:transparent;
+  color:var(--muted);
+  font-weight:600;
+  font-size:0.92rem;
+  border:1px solid transparent;
+  transition:all .18s ease;
+}
+.navbar .application-button:hover{
+  color:var(--text);
+  border-color:var(--border);
+  background:var(--panel);
+}
+
+/* =========================
+   Primary Button
+   ========================= */
+.btn-primary{
+  display:inline-block;
+  padding:10px 16px;
+  background:var(--primary-grad);
+  color:#fff;
+  font-weight:700;
+  border-radius:14px;
+  text-decoration:none;
+  box-shadow: 0 6px 14px rgba(59,130,246,0.25);
+  transition:transform .14s ease, box-shadow .14s ease;
+}
+.btn-primary:hover{ 
+  transform:translateY(-2px); 
+  box-shadow:0 10px 20px rgba(59,130,246,0.3) 
+}
+.large-btn{padding:14px 20px;font-size:1.05rem}
+
+/* =========================
+   Content Sections
+   ========================= */
+.content-section{
+  margin:26px 0;
+  background: var(--panel);
+  border-radius:14px;
+  padding:22px;
+  box-shadow:var(--card-shadow);
+  border:1px solid var(--border);
+  transition: background 0.3s, color 0.3s;
+}
+.content-section h2{font-size:1.4rem;margin-bottom:10px}
+.content-section p{color:var(--muted);margin-bottom:12px}
+
+/* Features Grid */
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:12px;
+}
+.feature-box{
+  background:var(--bg);
+  border-radius:12px;
+  padding:14px;
+  border:1px solid var(--border);
+  box-shadow:var(--card-shadow);
+}
+.feature-box h3{font-size:1.02rem}
+.feature-box p{color:var(--muted);font-size:0.95rem}
+
+/* Announcements */
+.announcement{
+  background:var(--bg);
+  border-radius:10px;
+  padding:14px;
+  margin-bottom:12px;
+  border:1px solid var(--border);
+  box-shadow:var(--card-shadow);
+}
+.announcement h3{font-size:1.05rem;margin-bottom:6px}
+.announcement .date{font-size:0.82rem;color:var(--muted);margin-bottom:8px}
+.read-more{color:var(--accent2);text-decoration:none;font-weight:600}
+
+/* Contact */
+.contact-info p{color:var(--muted);margin-bottom:8px}
+
+/* =========================
+   Footer
+   ========================= */
+footer{
+  max-width:1120px;
+  margin:28px auto;
+  padding:18px 20px;
+  display:flex;
+  gap:10px;
+  right: 20px;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--muted);
+  font-size:0.95rem;
+  border-top:1px solid var(--border);
+}
+footer .social-links a{margin-left:10px;color:var(--muted);text-decoration:none}
+footer .social-links a:hover{color:var(--accent2)}
+
+/* =========================
+   Rules Page
+   ========================= */
+.rules-page-container{
+  max-width:1100px;
+  margin:18px auto;
+  padding:18px;
+  background:var(--panel);
+  border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:var(--card-shadow);
+}
+.rules-page-container h2{font-size:1.5rem;margin-bottom:8px}
+.rules-intro{color:var(--muted);margin-bottom:16px}
+.rules-category{margin-bottom:18px;padding:12px;border-radius:10px;background:var(--panel)}
+.rules-category h3{font-size:1.1rem;margin-bottom:10px}
+.rules-category ol, .rules-category ul{margin-left:18px;color:var(--muted)}
+.rules-category li{margin:6px 0;line-height:1.5}
+
+/* =========================
+   Theme Toggle Button (PNG Icons)
+   ========================= */
+.theme-toggle {
+  position: fixed;
+  top: 70;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.theme-toggle img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+}
+
+.theme-toggle:hover img {
+  transform: scale(1.2);
+}
+
+.lang-toggle-container{
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 1001;
+}
+
+#lang-toggle{
+  background: rgba(0,0,0,0.06);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.12s ease;
+  backdrop-filter: blur(4px);
+}
+
+#lang-toggle:hover{ transform: translateY(-2px); background: rgba(0,0,0,0.09); }
+
+@media (max-width:560px){
+  .lang-toggle-container{ bottom: 12px; right: 12px; }
+  #lang-toggle{ padding:6px 8px; font-size:0.86rem }
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width:900px){
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-section{flex-direction:column;align-items:flex-start}
+  footer{flex-direction:column;align-items:flex-start;gap:8px}
+}
+@media (max-width:560px){
+  .features-grid{grid-template-columns:1fr}
+  .logo{font-size:1.35rem}
+}
+
+/* =========================
+   Background Music Button
+   ========================= */
+#muteBtn {
+  position: fixed;
+  bottom: 18px;      /* adjust as needed */
+  left: 18px;    /* adjust as needed */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  width: 30px;    /* button size */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#muteBtn img {
+  width: 100%;   /* fit the button */
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+#muteBtn:hover img {
+  transform: scale(1.2);
+}
+
+/* =========================
+   Navbar with Dropdown (VGS-BOT Style)
+   ========================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.dropdown-btn:hover {
+  color: var(--text);
+  border-color: var(--border);
+  background: var(--panel);
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  background: var(--panel);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+  min-width: 200px;
+  z-index: 999;
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  padding: 10px 16px;
+  color: var(--text);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: var(--bg);
+  color: var(--accent2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile view */
+@media (max-width: 700px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: none;
+  }
+  .dropdown-content a {
+    padding: 8px 0;
+  }
+}

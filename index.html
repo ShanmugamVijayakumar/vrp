@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vintage Roleplay-2026</title>
+  <link rel="icon" href="logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="config.js"></script>
+</head>
+
+<body>
+
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      🚀 Welcome to Vintage Roleplay! &nbsp;&nbsp; | &nbsp;&nbsp; 🎉 Server Live From Jan 2026! &nbsp;&nbsp; | &nbsp;&nbsp; 🔔 Join our Discord for latest news! 
+  </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="bgm.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="muteBtn" aria-label="Toggle background music">
+    <img id="musicIcon" src="no-sound.png" alt="Mute/Unmute" />
+  </button>
+
+  <header class="hero-section">
+    <div class="logo">VINTAGE ROLEPLAY</div>
+    <nav class="navbar">
+      <a href="#home" class="application-button"><span data-lang="en">Home</span> <span data-lang="ta">முகப்பு</span></a>
+      <a href="#announcements" class="application-button"><span data-lang="en">Announcements</span> <span data-lang="ta">அறிவிப்புகள்</span></a>
+      <a href="rules.html" class="application-button"><span data-lang="en">Rules</span> <span data-lang="ta">விதிகள்</span></a>
+      <a href="application.html" id="visa-link"class="application-button" id="app-link"><span data-lang="en">Visa Application</span> <span data-lang="ta">விசா விண்ணப்பம்</span></a>
+      <a href="#contact" class="application-button"><span data-lang="en">Contact</span> <span data-lang="ta">தொடர்பு</span></a>
+      <a id="discord-login" href="/login" class="btn-primary" style="margin-left:10px; cursor:pointer;">
+        <i class="fab fa-discord"></i>
+        <span data-lang="en">Login</span>
+        <span data-lang="ta">Login</span>
+      </a>
+      </nav>
+
+    <button id="theme-toggle" class="theme-toggle">
+      <img id="theme-icon" src="bulb_on.png" alt="Toggle Theme">
+    </button>
+  </header>
+
+  <div class="lang-toggle-container">
+    <button id="lang-toggle">தமிழ் / EN</button>
+  </div>
+
+  <main>
+        <section id="home" class="content-section">
+            <h2><span data-lang="en">Welcome to Grand Roleplay</span> <span data-lang="ta">Grand Roleplay-க்கு வருக</span></h2>
+            <p><span data-lang="en">Experience the ultimate SA:MP Roleplay environment. We focus on realism, unique job systems, and a dedicated community. Join today and start your life in Los Santos!</span>
+            <span data-lang="ta">முதல் நிலை SA:MP பாத்திரநடை அனுபவத்தை அனுபவிக்கவும். நாங்கள் யதார்த்தம், தனித்துவமான வேலை அமைப்புகள் மற்றும் அர்ப்பணிக்கப்பட்ட சமூகத்தை கவனிக்கிறோம். இன்றே சேரவும் மற்றும் லாஸ் சாண்டோஸில் உங்கள் வாழ்க்கையைத் தொடங்குங்கள்!</span></p>
+            <div class="features-grid">
+                <div class="feature-box"><h3><i class="fas fa-hammer"></i> <span data-lang="en">Custom Jobs</span> <span data-lang="ta">தனிப்பயன் வேலைகள்</span></h3><p><span data-lang="en">Work as a mechanic, truck driver, or even a crime boss.</span> <span data-lang="ta">ஒரு இயந்திர வல்லுநராக, டிரக் ஓட்டுநராக அல்லது குற்றவாளியா கூட வேலை செய்யலாம்.</span></p></div>
+                <div class="feature-box"><h3><i class="fas fa-house-user"></i> <span data-lang="en">Dynamic Housing</span> <span data-lang="ta">தனிப்பட்ட வீடமைப்பு</span></h3><p><span data-lang="en">Purchase and customize apartments, houses, and businesses.</span> <span data-lang="ta">அலைபேசி, வீடுகள் மற்றும் வணிகங்களை வாங்கி தனிப்பயன் மாற்றம் செய்யலாம்.</span></p></div>
+                <div class="feature-box"><h3><i class="fas fa-user-shield"></i> <span data-lang="en">Active Staff</span> <span data-lang="ta">செயலில் உள்ள பணியாளர்கள்</span></h3><p><span data-lang="en">24/7 in-game and Discord support to ensure fair play.</span> <span data-lang="ta">நியாயமான விளையாட்டை உறுதி செய்ய 24/7 in-game மற்றும் Discord ஆதரவு.</span></p></div>
+            </div>
+        </section>
+
+        <section id="announcements" class="content-section dark-bg">
+            <h2><span data-lang="en">Latest Announcements</span> <span data-lang="ta">சமீபத்திய அறிவிப்புகள்</span></h2>
+            
+            <article class="announcement">
+                <h3><span data-lang="en">V1.5 Mega Update Released!</span> <span data-lang="ta">V1.5 மெகா அப்டேட் வெளியிடப்பட்டது!</span></h3>
+                <p class="date">October 25, 2025</p>
+                <p><span data-lang="en">We are excited to announce the launch of V1.5! This update introduces a completely new prison system, three new legal jobs, and an overhaul of the faction base interiors. Read the full patch notes on our forum.</span>
+                <span data-lang="ta">V1.5 வெளியீட்டு அறிவிப்பில் மிகுந்த மகிழ்ச்சி! இந்த அப்டேட் புதிய சிறை அமைப்பை, மூன்று புதிய சட்டபூர்வ வேலைகளை மற்றும் பிரிவு அடிப்படை உள் வடிவமைப்பில் மாற்றங்களை கொண்டு வருகிறது. முழு மாற்ற குறிப்புகளை எங்கள் போரத்தில் படியுங்கள்.</span></p>
+                <a href="#" class="read-more"><span data-lang="en">View Full Patch Notes &rarr;</span> <span data-lang="ta">முழு மாற்ற குறிப்புகளை பார்க்க &rarr;</span></a>
+            </article>
+            
+            <article class="announcement">
+                <h3><span data-lang="en">Weekly Staff Applications Open</span> <span data-lang="ta">வாராந்திர பணியாளர் விண்ணப்பங்கள் திறக்கப்பட்டன</span></h3>
+                <p class="date">October 20, 2025</p>
+                <p><span data-lang="en">Think you have what it takes to join the Admin team? Staff applications are now open! Click the link below to apply.</span> <span data-lang="ta">நீங்கள் நிர்வாக குழுவில் சேர்ந்தால் சரி என்று நினைக்கிறீர்களா? பணியாளர் விண்ணப்பங்கள் இப்போது திறந்திருக்கும்! விண்ணப்பிக்க கீழே உள்ள இணைப்பு மீது கிளிக் செய்யவும்.</span></p>
+            </article>
+
+            <article class="announcement">
+                <h3><span data-lang="en">New Event: Race Wars Tonight!</span> <span data-lang="ta">புது நிகழ்வு: இன்று இரவு Race Wars!</span></h3>
+                <p class="date">October 15, 2025</p>
+                <p><span data-lang="en">Join us tonight at the Los Santos Forum for a massive organized street racing event! Prizes will be awarded to the top three finishers.</span> <span data-lang="ta">இன்று இரவு லாஸ் சாண்டோஸ் மன்றத்தில் பிரம்மாண்டமான தெரு பந்தய நிகழ்வுக்கு எங்களுடன் சேருங்கள்! முதல் மூன்று இடங்களுக்கு பரிசுகள் வழங்கப்படும்.</span></p>
+            </article>
+
+            <a href="application.html" class="btn-primary large-btn"><span data-lang="en">View Open Applications</span> <span data-lang="ta">திறந்த விண்ணப்பங்களை பார்க்க</span></a>
+        </section>
+
+        <section id="contact" class="content-section dark-bg">
+            <h2><span data-lang="en">Contact & Support</span> <span data-lang="ta">தொடர்பு & ஆதரவு</span></h2>
+            <div class="contact-info">
+                <p><i class="fab fa-discord"></i> <span data-lang="en">Discord:</span> <span data-lang="en">Join our official Discord for live support and community chat.</span> <span data-lang="ta">Discord:</span> <span data-lang="ta">நேரடி ஆதரவிற்கும் சமுதாய உரையாடலுக்குமான எங்கள் அதிகாரபூர்வ Discord-அில் கலந்து கொள்ளுங்கள்.</span></p>
+                <a href="YOUR_DISCORD_INVITE_LINK" class="btn-primary"><i class="fab fa-discord"></i> <span data-lang="en">Join Discord</span> <span data-lang="ta">Discord இல் சேரவும்</span></a>
+                <p><i class="fas fa-envelope"></i> <span data-lang="en">Email:</span> <span data-lang="en">For serious inquiries or appeals, contact <a href="mailto:rcrptamil2022@gmail.com">rcrptamil2022@gmail.com</a></span> <span data-lang="ta">மின்னஞ்சல்:</span> <span data-lang="ta">கடுமையான விசாரணைகள் அல்லது மனுதாக்கல்களுக்கு, தொடர்பு கொள்ளவும் <a href="mailto:rcrptamil2022@gmail.com">rcrptamil2022@gmail.com</a></span></p>
+            </div>
+        </section>
+        
+    </main>
+
+  <footer>
+    <p><span data-lang="en">&copy; 2025 Grand Roleplay. All Rights Reserved.</span> 
+    <span data-lang="ta">&copy; 2025 Grand Roleplay. அனைத்து உரிமைகளும் பாதுகாக்கப்படுகின்றன.</span></p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/rcxat_001?igsh=N3pidDRwb2Jham9n"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@vgsyt_0705?si=YRRWign4nOAVhdu4"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script>
+  // ------------------------------
+  // THEME TOGGLE
+  // ------------------------------
+  const toggleBtn = document.getElementById("theme-toggle");
+  const themeIcon = document.getElementById("theme-icon");
+  const root = document.documentElement;
+  const icons = { light: "bulb_on.png", dark: "bulb_off.png" };
+  let savedTheme = localStorage.getItem("theme") || "light";
+  root.setAttribute("data-theme", savedTheme);
+  themeIcon.src = icons[savedTheme];
+  toggleBtn.addEventListener("click", () => {
+    const next = savedTheme === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    themeIcon.src = icons[next];
+    localStorage.setItem("theme", next);
+    savedTheme = next;
+  });
+
+  // ------------------------------
+  // LANGUAGE TOGGLE
+  // ------------------------------
+  const langToggle = document.getElementById("lang-toggle");
+  let currentLang = localStorage.getItem("lang") || "en";
+  function setLanguage(lang) {
+    const elements = document.querySelectorAll("[data-lang]");
+    elements.forEach(el => el.style.display = el.dataset.lang === lang ? "inline" : "none");
+    localStorage.setItem("lang", lang);
+  }
+  setLanguage(currentLang);
+  langToggle.addEventListener("click", () => {
+    currentLang = currentLang === "en" ? "ta" : "en";
+    setLanguage(currentLang);
+  });
+
+  // ------------------------------
+  // BACKGROUND MUSIC
+  // ------------------------------
+  const bgMusic = document.getElementById('bgMusic');
+  const muteBtn = document.getElementById('muteBtn');
+  const musicIcon = document.getElementById('musicIcon');
+  bgMusic.volume = 0.4;
+  bgMusic.muted = false;
+  musicIcon.src = 'sound.png';
+  function playMusicOnInteraction() {
+    bgMusic.play().catch(() => {});
+    window.removeEventListener('click', playMusicOnInteraction);
+    window.removeEventListener('keydown', playMusicOnInteraction);
+  }
+  window.addEventListener('click', playMusicOnInteraction);
+  window.addEventListener('keydown', playMusicOnInteraction);
+  muteBtn.addEventListener('click', () => {
+    bgMusic.muted = !bgMusic.muted;
+    musicIcon.src = bgMusic.muted ? 'no-sound.png' : 'sound.png';
+  });
+
+  // ------------------------------
+  // DISCORD LOGIN SYSTEM (Local Server Version)
+  // ------------------------------
+  const visaLink = document.getElementById("visa-link");
+  const discordLoginBtn = document.getElementById("discord-login");
+  const nav = document.querySelector(".navbar");
+
+  // Use configuration from config.js (auto-detects environment)
+  const BASE_URL = window.APP_CONFIG?.BASE_URL || window.location.origin;
+  const LOGIN_URL = window.APP_CONFIG?.LOGIN_URL || `${BASE_URL}/login`;
+  const LOGOUT_URL = window.APP_CONFIG?.LOGOUT_URL || `${BASE_URL}/logout`;
+  const USER_INFO_URL = window.APP_CONFIG?.USER_INFO_URL || `${BASE_URL}/user`;
+
+  async function updateAuthUI() {
+    try {
+      const response = await fetch(USER_INFO_URL, { credentials: "include" });
+
+      if (response.ok) {
+        const user = await response.json();
+
+        const username = user.username || "User";
+        const avatar = user.avatar
+          ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
+          : "https://cdn.discordapp.com/embed/avatars/0.png";
+
+        localStorage.setItem("discord_username_secure", username);
+        localStorage.setItem("discord_user_avatar", avatar);
+
+        // Hide login button
+        discordLoginBtn.style.display = "none";
+
+        // Create or update user display
+        let userDisplay = document.getElementById("user-display");
+        if (!userDisplay) {
+          userDisplay = document.createElement("div");
+          userDisplay.id = "user-display";
+          userDisplay.className = "user-info";
+          userDisplay.style.display = "flex";
+          userDisplay.style.alignItems = "center";
+          userDisplay.style.gap = "8px";
+          userDisplay.style.marginLeft = "15px";
+          userDisplay.innerHTML = `
+            <img src="${avatar}" alt="avatar" id="discord-avatar"
+              style="width:32px;height:32px;border-radius:50%;border:2px solid #7289DA;">
+            <span id="discord-name" style="color:#7289DA;font-weight:bold;">${username}</span>
+          `;
+          nav.appendChild(userDisplay);
+        } else {
+          document.getElementById("discord-avatar").src = avatar;
+          document.getElementById("discord-name").textContent = username;
+        }
+
+        // Add Logout button
+        let logoutBtn = document.getElementById("discord-logout");
+        if (!logoutBtn) {
+          logoutBtn = document.createElement("a");
+          logoutBtn.id = "discord-logout";
+          logoutBtn.href = "#";
+          logoutBtn.className = "btn-primary";
+          logoutBtn.style.marginLeft = "10px";
+          logoutBtn.innerHTML = `<i class="fas fa-sign-out-alt"></i> Logout`;
+          logoutBtn.onclick = async () => {
+            await fetch(LOGOUT_URL, { credentials: "include" });
+            localStorage.clear();
+            location.reload();
+          };
+          nav.appendChild(logoutBtn);
+        }
+
+        // Enable Visa Application
+        visaLink.style.pointerEvents = "auto";
+        visaLink.style.opacity = "1";
+      } else {
+        handleLoggedOut();
+      }
+    } catch (err) {
+      console.error("Error fetching user info:", err);
+      handleLoggedOut();
+    }
+  }
+
+  function handleLoggedOut() {
+    discordLoginBtn.style.display = "inline-block";
+    discordLoginBtn.onclick = () => { window.location.href = LOGIN_URL; };
+    document.getElementById("discord-logout")?.remove();
+    document.getElementById("user-display")?.remove();
+    localStorage.clear();
+    visaLink.style.pointerEvents = "none";
+    visaLink.style.opacity = "0.5";
+    visaLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Please login with Discord to access the Visa Application.");
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", updateAuthUI);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA RP Visa Application</title>
+  <link rel="icon" href="logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="app_style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      🚀 Welcome to VGS BOT Website! &nbsp;&nbsp; | &nbsp;&nbsp; 🎉 New updates coming soon! &nbsp;&nbsp; | &nbsp;&nbsp; 🔔 Join our Discord for latest news!
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="hero-section">
+    <div class="logo">VINTAGE ROLEPLAY</div>
+    <nav class="navbar">
+      <a href="index.html" class="application-button"><span data-lang="en">Home</span></a>
+      <a href="rules.html" class="application-button"><span data-lang="en">Rules</span></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScg2-CaNFhjupwYG1tOFtEyLW4j9vOSBWa8gikjjf1iqhBaJQ/formResponse" class="application-button"><span data-lang="en">Staff Application</span></a>
+      <a href="index.html" class="application-button"><span data-lang="en">Contact</span></a>
+
+      <!--<a href="samp://46.183.184.33:2096" class="btn-primary">
+        <span data-lang="en">JOIN SERVER</span>
+        <span data-lang="ta">சேவையில் சேரவும்</span>
+      </a>-->
+    </nav>
+
+    <button id="theme-toggle" class="theme-toggle">
+      <img id="theme-icon" src="bulb_on.png" alt="Toggle Theme">
+    </button>
+  </header>
+
+  <!-- Application Form -->
+  <div class="form-container">
+    <h1>Visa Application Form</h1>
+
+    <form id="appForm">
+      <!-- Basic Info -->
+      <label for="realName">Real Name</label>
+      <input type="text" id="realName" name="realName" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="charName">Character Name [e.g. Vinayak_Mahadev]</label>
+      <input type="text" id="charName" name="charName" required>
+
+      <label for="storyline">Character Storyline</label>
+      <textarea id="storyline" name="storyline" rows="3" placeholder="Write a short background story for your character"></textarea>
+
+      <label for="readRules">Have you read the server rules?</label>
+      <select id="readRules" name="readRules" required>
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="charGender">Character Gender</label>
+      <select id="charGender" name="charGender" required>
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="rpYears">Roleplay Experience (Years)</label>
+      <input type="number" id="rpYears" name="rpYears" min="0" required>
+
+      <!-- 🧩 Auto-filled Discord field -->
+      <label for="discord">Discord ID</label>
+      <input type="text" id="discord" name="discord" readonly required>
+
+      <!-- Random Questions -->
+      <h2>Roleplay Questions</h2>
+      <div id="randomQuestions"></div>
+
+      <!-- Status Box -->
+      <div id="statusBox"></div>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <!-- ✅ Success Animation -->
+  <div id="successAnimation" class="success-animation">
+    <img src="sucess.gif" alt="Success" class="success-gif" />
+    <p>Your application has been submitted successfully!</p>
+    <button id="goHomeBtn">Go to Home</button>
+  </div>
+
+  <!-- Theme & Language Script -->
+  <script>
+  // --- Theme Toggle ---
+  const toggleBtn = document.getElementById("theme-toggle");
+  const themeIcon = document.getElementById("theme-icon");
+  const root = document.documentElement;
+  const icons = { light: "bulb_on.png", dark: "bulb_off.png" };
+
+  let savedTheme = localStorage.getItem("theme") || "light";
+  root.setAttribute("data-theme", savedTheme);
+  themeIcon.src = icons[savedTheme];
+
+  toggleBtn.addEventListener("click", () => {
+    let next = savedTheme === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    themeIcon.src = icons[next];
+    savedTheme = next;
+  });
+
+  // --- Language Toggle (Optional) ---
+  const langToggle = document.getElementById("lang-toggle");
+  let currentLang = localStorage.getItem("lang") || "en";
+
+  function setLanguage(lang) {
+    const elements = document.querySelectorAll("[data-lang]");
+    elements.forEach(el => {
+      el.style.display = (el.dataset.lang === lang) ? "inline" : "none";
+    });
+    localStorage.setItem("lang", lang);
+  }
+  setLanguage(currentLang);
+
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      currentLang = currentLang === "en" ? "ta" : "en";
+      setLanguage(currentLang);
+    });
+  }
+
+  // Discord auth check is handled by app.js
+  // No need to duplicate the check here
+</script>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+/* =========================
+   GTA RP Application Form
+   Light + Dark Theme + Tamil/English Toggle
+   ========================= */
+
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  --bg: #f9f9f9;
+  --panel: #ffffff;
+  --text: #111;
+  --muted: #555;
+  --primary: #007bff;
+  --accent: #10b981;
+  --border: #ddd;
+}
+
+html[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --panel: #2a2a2a;
+  --text: #f5f5f5;
+  --muted: #bbb;
+  --primary: #0d6efd;
+  --accent: #34d399;
+  --border: rgba(255,255,255,0.1);
+}
+
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ---------- FORM CONTAINER ---------- */
+.form-container {
+  max-width: 650px;
+  margin: auto;
+  padding: 22px;
+  background: var(--panel);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border: 1px solid var(--border);
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.form-container h2 {
+  font-size: 1.2rem;
+  margin: 18px 0 10px;
+  color: var(--primary);
+}
+
+/* ---------- FORM ELEMENTS ---------- */
+form label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(59,130,246,0.2);
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ---------- PROGRESS BAR ---------- */
+.progress-container {
+  width: 100%;
+  background: var(--border);
+  border-radius: 6px;
+  margin: 12px 0 20px;
+  height: 12px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+/* ---------- BUTTONS ---------- */
+button,
+.btn-primary {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+button:hover,
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ---------- STATUS MESSAGE ---------- */
+#statusBox {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.success-msg {
+  color: var(--accent);
+}
+.error-msg {
+  color: #ef4444;
+}
+
+/* ---------- LANGUAGE HANDLING ---------- */
+[data-lang="ta"] {
+  display: none;
+}
+
+html[data-language="ta"] [data-lang="ta"] {
+  display: inline;
+}
+html[data-language="ta"] [data-lang="en"] {
+  display: none;
+}
+
+/* ---------- THEME TOGGLE ---------- */
+.theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-toggle img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.theme-toggle:hover img {
+  transform: scale(1.2);
+}
+
+/* ---------- LANGUAGE TOGGLE ---------- */
+.lang-toggle-container {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 1001;
+}
+
+#lang-toggle {
+  background: rgba(0,0,0,0.06);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.12s ease;
+  backdrop-filter: blur(4px);
+}
+
+#lang-toggle:hover {
+  transform: translateY(-2px);
+  background: rgba(0,0,0,0.09);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 16px;
+  }
+  .lang-toggle-container {
+    bottom: 12px;
+    right: 12px;
+  }
+  #lang-toggle {
+    padding: 6px 8px;
+    font-size: 0.86rem;
+  }
+}
+
+.success-animation {
+  display: none; /* hidden initially */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--panel, #fff);
+  color: var(--text, #333);
+  border-radius: 12px;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.success-animation.show {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.success-animation img.success-gif {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.success-animation p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.success-animation button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.success-animation button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -55%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
