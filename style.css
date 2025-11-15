@@ -114,6 +114,7 @@ main{max-width:1120px;margin:28px auto;padding:0 20px}
   border:1px solid transparent;
   transition:all .18s ease;
   text-decoration-color:#0000;
+  color: #ffffff;
 }
 .navbar .application-button:hover{
   color:var(--text);
@@ -445,6 +446,7 @@ footer .social-links a:hover{color:var(--accent2)}
     padding: 8px 0;
   }
 }
+
 
 
 
