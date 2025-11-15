@@ -235,8 +235,8 @@ footer .social-links a:hover{color:var(--accent2)}
 }
 
 .server-logo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -445,5 +445,6 @@ footer .social-links a:hover{color:var(--accent2)}
     padding: 8px 0;
   }
 }
+
 
 
