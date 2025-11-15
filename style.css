@@ -31,7 +31,7 @@ html[data-theme="dark"] {
 html,body{height:100%}
 body{
   background-color: var(--bg);                  /* Keep theme color */
-  background-image: url("bgindex.jpg");              /* Your image */
+  background-image: url("bgindex.png");              /* Your image */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -445,6 +445,7 @@ footer .social-links a:hover{color:var(--accent2)}
     padding: 8px 0;
   }
 }
+
 
 
 
