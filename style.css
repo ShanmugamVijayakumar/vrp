@@ -220,6 +220,27 @@ footer .social-links a:hover{color:var(--accent2)}
 .rules-category ol, .rules-category ul{margin-left:18px;color:var(--muted)}
 .rules-category li{margin:6px 0;line-height:1.5}
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.server-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #2e86de, #00d2d3);
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
 /* =========================
    Theme Toggle Button (PNG Icons)
    ========================= */
@@ -399,4 +420,5 @@ footer .social-links a:hover{color:var(--accent2)}
     padding: 8px 0;
   }
 }
+
 
