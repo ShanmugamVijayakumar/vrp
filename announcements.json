@@ -1,19 +1,21 @@
 {
-  "running": "🚀 Server opening 2026 | 🎉 New Update Soon",
-  "announcements": [
+  "running": "🚀 Vintage Roleplay Tamil — Server Open | New Events Coming Soon! 🎉",
+
+  "items": [
     {
-      "title_en": "Server Opening 2026",
-      "title_ta": "சர்வர் திறப்பு 2026",
-      "text_en": "Vintage Roleplay will officially launch in January 2026.",
-      "text_ta": "Vintage Roleplay ஜனவரி 2026-இல் அதிகாரப்பூர்வமாக தொடங்குகிறது.",
-      "date": "January 12, 2026"
+      "title_en": "Weekly Staff Applications Open",
+      "title_ta": "வாராந்திர பணியாளர் விண்ணப்பங்கள் திறக்கப்பட்டன",
+      "date": "January 10, 2026",
+      "text_en": "Apply now to join our admin team!",
+      "text_ta": "எங்கள் நிர்வாகக் குழுவில் சேர இப்போது விண்ணப்பிக்கவும்!"
     },
+
     {
-      "title_en": "Staff Recruitment Open",
-      "title_ta": "பணியாளர் தேர்வு திறக்கப்பட்டுள்ளது",
-      "text_en": "We are hiring staff members. Apply soon!",
-      "text_ta": "பணியாளர்கள் தேவை. உடனே விண்ணப்பிக்கவும்!",
-      "date": "January 10, 2026"
+      "title_en": "New Event: Car Meet",
+      "title_ta": "புதிய நிகழ்வு: கார் மீட்",
+      "date": "January 5, 2026",
+      "text_en": "Car meet happening tonight at LS Mall!",
+      "text_ta": "இன்று இரவு LS மாலில் கார் மீட் நடைபெறுகிறது!"
     }
   ]
 }
