@@ -12,9 +12,7 @@
 <body>
 
      <div class="announcement-bar">
-  <div class="announcement-track">
-    🚀 Welcome to Vintage Roleplay! &nbsp;&nbsp; | &nbsp;&nbsp; 🎉 Server Live From Jan 2026! &nbsp;&nbsp; | &nbsp;&nbsp; 🔔 Join our Discord for latest news! 
-  </div>
+  <div class="announcement-track" id="running-announcement"></div>
 </div>
 
     <header class="hero-section">
@@ -389,6 +387,54 @@
       discordBtn.style.opacity = "0.85";
       discordBtn.style.pointerEvents = "none";
     }
+      document.addEventListener("DOMContentLoaded", updateAuthUI);
+
+  async function loadAnnouncements() {
+  const url = "https://vintageroleplay-tamil.onrender.com/announcements.json";
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    // Running announcement update
+    const ticker = document.querySelector(".announcement-track");
+    if (ticker) ticker.innerHTML = data.running;
+
+    // Multiple announcements
+    const container = document.getElementById("announcement-list");
+    container.innerHTML = ""; // clear old items
+
+    data.items.forEach(a => {
+      const article = document.createElement("article");
+      article.className = "announcement";
+
+      article.innerHTML = `
+        <h3>
+          <span data-lang="en">${a.title_en}</span>
+          <span data-lang="ta">${a.title_ta}</span>
+        </h3>
+
+        <p class="date">${a.date}</p>
+
+        <p>
+          <span data-lang="en">${a.text_en}</span>
+          <span data-lang="ta">${a.text_ta}</span>
+        </p>
+      `;
+
+      container.appendChild(article);
+    });
+
+    // Apply language toggle again
+    setLanguage(localStorage.getItem("lang") || "en");
+
+  } catch (err) {
+    console.error("Announcement loading failed:", err);
+  }
+}
+
+   // Load on page start
+  document.addEventListener("DOMContentLoaded", loadAnnouncements);
   </script>
 
 
