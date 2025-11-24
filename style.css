@@ -8,7 +8,7 @@
   --bg:#ffffff;
   --panel:#f9fafb;
   --muted:#4b5563;
-  --accent1:##ce3acd; /* emerald */
+  --accent1:#ce3acd; /* emerald */
   --accent2:#2bdde3; /* blue */
   --primary-grad: linear-gradient(90deg, var(--accent2), var(--accent1));
   --text:#111827;
@@ -420,6 +420,7 @@ footer .social-links a:hover{color:var(--accent2)}
     padding: 8px 0;
   }
 }
+
 
 
 
