@@ -14,10 +14,7 @@
 <body>
 
   <div class="announcement-bar">
-    <div class="announcement-track">
-      🚀 Welcome to Vintage Roleplay! &nbsp;&nbsp; | &nbsp;&nbsp; 🎉 Server Live From Jan 2026! &nbsp;&nbsp; | &nbsp;&nbsp; 🔔 Join our Discord for latest news! 
-  </div>
-    </div>
+    <div class="announcement-track" id="running-announcement"></div>
   </div>
 
   <audio id="bgMusic" loop>
@@ -30,13 +27,13 @@
   </button>
 
   <header class="hero-section">
-    <div class="logo-container">
-  <img src="logo.png" alt="Server Logo" class="server-logo">
-</div>
+    <div class="logo">VINTAGE ROLEPLAY</div>
     <nav class="navbar">
       <a href="#home" class="application-button"><span data-lang="en">Home</span> <span data-lang="ta">முகப்பு</span></a>
+      <a href="#announcements" class="application-button"><span data-lang="en">Announcements</span> <span data-lang="ta">அறிவிப்புகள்</span></a>
       <a href="rules.html" class="application-button"><span data-lang="en">Rules</span> <span data-lang="ta">விதிகள்</span></a>
       <a href="application.html" id="visa-link"class="application-button" id="app-link"><span data-lang="en">Visa Application</span> <span data-lang="ta">விசா விண்ணப்பம்</span></a>
+      <a href="#contact" class="application-button"><span data-lang="en">Contact</span> <span data-lang="ta">தொடர்பு</span></a>
       <a id="discord-login" href="/login" class="btn-primary" style="margin-left:10px; cursor:pointer;">
         <i class="fab fa-discord"></i>
         <span data-lang="en">Login</span>
@@ -55,7 +52,7 @@
 
   <main>
         <section id="home" class="content-section">
-            <h2><span data-lang="en">Welcome to Vintage Roleplay</span> <span data-lang="ta">Vintage Roleplay-க்கு வருக</span></h2>
+            <h2><span data-lang="en">Welcome to Grand Roleplay</span> <span data-lang="ta">Grand Roleplay-க்கு வருக</span></h2>
             <p><span data-lang="en">Experience the ultimate SA:MP Roleplay environment. We focus on realism, unique job systems, and a dedicated community. Join today and start your life in Los Santos!</span>
             <span data-lang="ta">முதல் நிலை SA:MP பாத்திரநடை அனுபவத்தை அனுபவிக்கவும். நாங்கள் யதார்த்தம், தனித்துவமான வேலை அமைப்புகள் மற்றும் அர்ப்பணிக்கப்பட்ட சமூகத்தை கவனிக்கிறோம். இன்றே சேரவும் மற்றும் லாஸ் சாண்டோஸில் உங்கள் வாழ்க்கையைத் தொடங்குங்கள்!</span></p>
             <div class="features-grid">
@@ -68,27 +65,8 @@
         <section id="announcements" class="content-section dark-bg">
             <h2><span data-lang="en">Latest Announcements</span> <span data-lang="ta">சமீபத்திய அறிவிப்புகள்</span></h2>
             
-            <article class="announcement">
-                <h3><span data-lang="en">V1.5 Mega Update Released!</span> <span data-lang="ta">V1.5 மெகா அப்டேட் வெளியிடப்பட்டது!</span></h3>
-                <p class="date">October 25, 2025</p>
-                <p><span data-lang="en">We are excited to announce the launch of V1.5! This update introduces a completely new prison system, three new legal jobs, and an overhaul of the faction base interiors. Read the full patch notes on our forum.</span>
-                <span data-lang="ta">V1.5 வெளியீட்டு அறிவிப்பில் மிகுந்த மகிழ்ச்சி! இந்த அப்டேட் புதிய சிறை அமைப்பை, மூன்று புதிய சட்டபூர்வ வேலைகளை மற்றும் பிரிவு அடிப்படை உள் வடிவமைப்பில் மாற்றங்களை கொண்டு வருகிறது. முழு மாற்ற குறிப்புகளை எங்கள் போரத்தில் படியுங்கள்.</span></p>
-                <a href="#" class="read-more"><span data-lang="en">View Full Patch Notes &rarr;</span> <span data-lang="ta">முழு மாற்ற குறிப்புகளை பார்க்க &rarr;</span></a>
-            </article>
-            
-            <article class="announcement">
-                <h3><span data-lang="en">Weekly Staff Applications Open</span> <span data-lang="ta">வாராந்திர பணியாளர் விண்ணப்பங்கள் திறக்கப்பட்டன</span></h3>
-                <p class="date">October 20, 2025</p>
-                <p><span data-lang="en">Think you have what it takes to join the Admin team? Staff applications are now open! Click the link below to apply.</span> <span data-lang="ta">நீங்கள் நிர்வாக குழுவில் சேர்ந்தால் சரி என்று நினைக்கிறீர்களா? பணியாளர் விண்ணப்பங்கள் இப்போது திறந்திருக்கும்! விண்ணப்பிக்க கீழே உள்ள இணைப்பு மீது கிளிக் செய்யவும்.</span></p>
-            </article>
-
-            <article class="announcement">
-                <h3><span data-lang="en">New Event: Race Wars Tonight!</span> <span data-lang="ta">புது நிகழ்வு: இன்று இரவு Race Wars!</span></h3>
-                <p class="date">October 15, 2025</p>
-                <p><span data-lang="en">Join us tonight at the Los Santos Forum for a massive organized street racing event! Prizes will be awarded to the top three finishers.</span> <span data-lang="ta">இன்று இரவு லாஸ் சாண்டோஸ் மன்றத்தில் பிரம்மாண்டமான தெரு பந்தய நிகழ்வுக்கு எங்களுடன் சேருங்கள்! முதல் மூன்று இடங்களுக்கு பரிசுகள் வழங்கப்படும்.</span></p>
-            </article>
-
-            <a href="application.html" class="btn-primary large-btn"><span data-lang="en">View Open Applications</span> <span data-lang="ta">திறந்த விண்ணப்பங்களை பார்க்க</span></a>
+             <div id="announcement-list"></div>
+            <!--<a href="application.html" class="btn-primary large-btn"><span data-lang="en">View Open Applications</span> <span data-lang="ta">திறந்த விண்ணப்பங்களை பார்க்க</span></a>-->
         </section>
 
         <section id="contact" class="content-section dark-bg">
@@ -263,6 +241,53 @@
   }
 
   document.addEventListener("DOMContentLoaded", updateAuthUI);
+
+  async function loadAnnouncements() {
+  const url = "https://vintageroleplay-tamil.onrender.com/announcements.json";
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    // Running announcement update
+    const ticker = document.querySelector(".announcement-track");
+    if (ticker) ticker.innerHTML = data.running;
+
+    // Multiple announcements
+    const container = document.getElementById("announcement-list");
+    container.innerHTML = ""; // clear old items
+
+    data.items.forEach(a => {
+      const article = document.createElement("article");
+      article.className = "announcement";
+
+      article.innerHTML = `
+        <h3>
+          <span data-lang="en">${a.title_en}</span>
+          <span data-lang="ta">${a.title_ta}</span>
+        </h3>
+
+        <p class="date">${a.date}</p>
+
+        <p>
+          <span data-lang="en">${a.text_en}</span>
+          <span data-lang="ta">${a.text_ta}</span>
+        </p>
+      `;
+
+      container.appendChild(article);
+    });
+
+    // Apply language toggle again
+    setLanguage(localStorage.getItem("lang") || "en");
+
+  } catch (err) {
+    console.error("Announcement loading failed:", err);
+  }
+}
+
+   // Load on page start
+  document.addEventListener("DOMContentLoaded", loadAnnouncements);
 </script>
 
 </body>
