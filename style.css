@@ -21,7 +21,7 @@ html[data-theme="dark"] {
   --bg:#0b0f14;
   --panel:#111827;
   --muted:#9ca3af;
-  --text:#ffffff ;
+  --text:#00357a ;
   --card-shadow: 0 6px 20px rgba(0,0,0,0.6);
   --border:rgba(255,255,255,0.08);
 }
@@ -446,6 +446,7 @@ footer .social-links a:hover{color:var(--accent2)}
     padding: 8px 0;
   }
 }
+
 
 
 
