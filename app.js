@@ -5,10 +5,10 @@ const successBox = document.getElementById('successAnimation');
 const goHomeBtn = document.getElementById('goHomeBtn');
 
 // === Discord Webhook URL & Role IDs ===
-const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1435555147072929923/33W_0XfPY5i9dAodHn9jMdwdIpFW6YSH9cpDVP3YF_gbfNLQ-GrU_d7SpB_YssEEF55l";
+const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1334460434052288624/Q6yjKaWfJEknHwSOyf9gJkXtum8OPszkCthn4agi3NrJwDAO3B-qT5fEb6fPQIcBT9H1";
 // Replace with your actual role IDs
-const ROLE_ID_1 = "1429439768940253287";
-const ROLE_ID_2 = "1429439764163198998";
+const ROLE_ID_1 = "901680426693836811";
+const ROLE_ID_2 = "846750736946954264";
 
 // =========================
 // Random Questions Sets
